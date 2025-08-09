@@ -39,14 +39,14 @@ const SliderImage = () => {
                     alt="Food"
                 />
                 <div className="absolute top-[45%] left-[5%] max-w-xs sm:max-w-md md:max-w-lg text-white">
-                    <p className="text-base sm:text-lg md:text-xl">
+                    {/* <p className="text-base sm:text-lg md:text-xl">
                         A restaurant website description should be concise and informative, highlighting the restaurant's unique qualities and providing essential information like location, cuisine, and hours of operation
                     </p>
                     <NavLink to="/allFoods">
                         <button className="mt-3 bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600 transition-colors duration-200 cursor-pointer">
                             Explore
                         </button>
-                    </NavLink>
+                    </NavLink> */}
                 </div>
                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide1" className="btn btn-circle">

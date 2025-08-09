@@ -30,7 +30,7 @@ const HotFoods = ({ foodsPromise }) => {
           id="sort"
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
-          className="border border-gray-300 rounded px-3 py-1"
+          className="text-primary border border-gray-300 rounded px-3 py-1"
         >
           <option value="none">Default</option>
           <option value="asc">Low to High</option>
