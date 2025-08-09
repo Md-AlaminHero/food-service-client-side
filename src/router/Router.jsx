@@ -12,6 +12,8 @@ import AddFood from '../pages/AddFood/AddFood';
 import MyPostedFoods from '../pages/MyPostedFoods/MyPostedFoods';
 import ViewOrders from '../pages/ViewOrders/ViewOrders';
 import AllFoods from '../pages/AllFoods/AllFoods';
+import AboutUs from '../pages/Shared/AboutUs';
+import Contact from '../pages/Shared/Contact';
 
 
 export const router = createBrowserRouter([
@@ -22,6 +24,14 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home
+            },
+            {
+                path: '/aboutUs',
+                Component: AboutUs
+            },
+            {
+                path: '/contact',
+                Component: Contact
             },
             {
                 path: 'allFoods',

@@ -13,14 +13,14 @@ const Navbar = () => {
         {
             user ? <>
                 <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/allFoods'>About Us</NavLink></li>
-                <li><NavLink to='/'>Contact</NavLink></li>
+                <li><NavLink to='/aboutUs'>About Us</NavLink></li>
+                <li><NavLink to='/contact'>Contact</NavLink></li>
             </> : <>
                 <li><NavLink to='/'>Home</NavLink></li>
                 <li><NavLink to='/allFoods'>All Foods</NavLink></li>
                 <li><NavLink to='/'>Food Gallery</NavLink></li>
-                <li><NavLink to='/allFoods'>About Us</NavLink></li>
-                <li><NavLink to='/'>Contact</NavLink></li>
+                <li><NavLink to='/aboutUs'>About Us</NavLink></li>
+                <li><NavLink to='/contact'>Contact</NavLink></li>
             </>
         }
     </>
@@ -36,7 +36,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-lg border-b-2 border-yellow-500 fixed top-0 left-0 w-full z-50">
+        <div className="navbar bg-base-100 shadow-lg border-b-2 border-yellow-500 sticky top-0 left-0 w-full z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
