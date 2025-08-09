@@ -8,12 +8,12 @@ const MyOrders = () => {
 
     const { user } = UseAuth();
     return (
-        <div>
+        <div className='min-h-screen'>
             <Suspense fallback={`loading your Orders`}>
                 <OrdersList MyOrdersPromise={MyOrdersPromise(user.email)}></OrdersList>
             </Suspense>
             <div className='py-5'>
-                <OrderStats></OrderStats>
+                {/* <OrderStats></OrderStats> */}
             </div>
         </div>
     );

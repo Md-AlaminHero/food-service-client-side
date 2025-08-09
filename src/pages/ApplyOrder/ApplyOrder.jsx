@@ -1,14 +1,14 @@
 import React from 'react';
 import UseAuth from '../../hooks/UseAuth';
-import { useParams } from 'react-router';
+import { useLoaderData, useParams } from 'react-router';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
 const ApplyOrder = () => {
-
+    const food = useLoaderData();
     const { id } = useParams();
     const { user } = UseAuth();
-    // console.log(user);
+    console.log(user, food);
 
 
 
@@ -19,7 +19,7 @@ const ApplyOrder = () => {
         const foodData = Object.fromEntries(formData.entries());
 
         const currentTime = new Date(Date.now()).toLocaleString();
-        
+
         const order = {
             foodId: id,
             customer: user.email,
@@ -39,6 +39,7 @@ const ApplyOrder = () => {
                         timer: 1500
                     });
                 }
+                console.log(order);
             })
             .catch(error => {
                 console.log(error);
@@ -55,19 +56,22 @@ const ApplyOrder = () => {
             <form onSubmit={handleApplyOrder}>
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
                     <label className="label">Food Name</label>
-                    <input type="text" name='food_name' className="input w-full" placeholder="Food Name" />
+                    <input type="text" name='food_name' defaultValue={food.food_name} readOnly className="input w-full" placeholder="Food Name" />
 
                     <label className="label">Quantity</label>
-                    <input type="number" name='quantity' className="input w-full" placeholder="Quantity" />
+                    <input type="number" name='quantity' defaultValue={food.quantity} readOnly className="input w-full" placeholder="Quantity" />
 
                     <label className="label">Price</label>
-                    <input type="number" name='price' className="input w-full" placeholder="Price" />
+                    <input type="number" name='price' defaultValue={food.price} readOnly className="input w-full" placeholder="Price" />
 
                     <label className="label">User Name</label>
-                    <input type="text" name='user_name' defaultValue={user.name} className="input w-full" placeholder="User Name" />
+                    <input type="text" name='user_name' defaultValue={user.displayName} className="input w-full" placeholder="User Name" />
 
                     <label className="label">User Email</label>
-                    <input type="text" name='user_email' defaultValue={user.email} className="input w-full" placeholder="User Email" />
+                    <input type="email" name='user_email' defaultValue={user.email} className="input w-full" placeholder="User Email" />
+
+                    <label className="label">User Address</label>
+                    <input type="text" name='user_address' className="input w-full" placeholder="User Address" />
 
 
                     <input type="submit" className='btn btn-primary' value="Purchase" />

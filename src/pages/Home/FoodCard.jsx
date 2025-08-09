@@ -16,10 +16,10 @@ const FoodCard = ({ food }) => {
                 <p className="text-gray-600 text-sm mb-4">
                     {description}
                 </p>
-                <div className='py-2'>
-                    <h2 className="text-xl">Category: {food_category}</h2>
-                    <h1 className="text-xl">Country: {food_origin}</h1>
-                    <p className='font-semibold'>Price: {price} TK</p>
+                <div className='py-2 text-primary'>
+                    <h2 className="text-xl"><span className='font-bold text-orange-400'>Category:</span> {food_category}</h2>
+                    <h1 className="text-xl"><span className='font-bold text-orange-400'>Country:</span> {food_origin}</h1>
+                    <p className='font-semibold'><span className='font-bold text-orange-400'>Price:</span> {price} TK</p>
                 </div>
                 <Link to={`/foods/${_id}`}><button className="bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600 transition-colors duration-200 cursor-pointer">View Details</button></Link>
             </div>

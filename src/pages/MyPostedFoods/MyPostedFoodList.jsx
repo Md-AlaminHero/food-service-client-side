@@ -6,7 +6,7 @@ const MyPostedFoodList = ({ foodsCreatedByPromise }) => {
 
     return (
         <div>
-            <h2 className="text-3xl text-center font-semibold py-3">foods created by you: {foods.length}</h2>
+            <h2 className="text-3xl text-center font-semibold py-3">Total Foods created: {foods.length}</h2>
             <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
                 <table className="table">
                     {/* head */}

@@ -46,7 +46,8 @@ export const router = createBrowserRouter([
                 path: '/purchase/:id',
                 element: <PrivateRoute>
                     <ApplyOrder></ApplyOrder>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader: ({ params }) => fetch(`https://restaurant-code-server.vercel.app/foods/${params.id}`)
             },
             {
                 path: 'myOrders',

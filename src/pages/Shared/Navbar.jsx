@@ -36,7 +36,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-lg border-b-2 border-yellow-500 sticky top-0 left-0 w-full z-50">
+        <div className="navbar bg-base-100 shadow-lg border-b-2 border-yellow-500 sticky top-0 left-0 w-full z-50 px-2 lg:px-5">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Foodi</a>
+                <div className='text-2xl font-bold text-orange-400'><NavLink to='/'>Foodi</NavLink></div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -86,7 +86,7 @@ const Navbar = () => {
                                 <ToggleTheme></ToggleTheme>
                                 <li><NavLink to='/MyOrders'>MyOrders</NavLink></li>
                                 <li><NavLink to='/AddFood'>Add Food</NavLink></li>
-                                <li><NavLink to='/MyPostedFoods'>My Posted Jobs</NavLink></li>
+                                <li><NavLink to='/MyPostedFoods'>My Posted Foods</NavLink></li>
                                 <li><NavLink to='/allFoods'>All Foods</NavLink></li>
                                 <li><NavLink to='/'>Food Gallery</NavLink></li>
                                 <li><Link to='/signin' onClick={handleSignOut} className="btn btn-primary px-10 ">Log Out</Link></li>

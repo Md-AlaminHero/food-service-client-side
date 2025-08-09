@@ -7,9 +7,9 @@ const OrdersList = ({ MyOrdersPromise }) => {
     // console.log(orders);
     return (
         <div>
-            <h2 className="text-3xl py-10">Total Food Purchases : {orders.length}</h2>
+            <h2 className="text-3xl py-10 text-center">Total Food Purchases : {orders.length}</h2>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
                 <table className="table">
                     {/* head */}
                     <thead>

@@ -18,9 +18,9 @@ const MyOrderRow = ({ order, index }) => {
                 {price} TK
             </td>
             <td>{buying_time}</td>
-            <th>
+            {/* <th>
                 <button className="btn btn-ghost">details</button>
-            </th>
+            </th> */}
         </tr>
     );
 };

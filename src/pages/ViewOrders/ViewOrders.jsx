@@ -28,8 +28,8 @@ const ViewOrders = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-3xl py-6 text-center">{myOrders.length} Total myOrders for jod id : {food_id}</h2>
+        <div className='min-h-screen'>
+            <h2 className="text-3xl py-6 text-center">{myOrders.length} Total Orders for Food id : {food_id}</h2>
             <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
                 <table className="table">
                     {/* head */}

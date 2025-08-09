@@ -10,7 +10,7 @@ const SliderImage = () => {
                     className="w-full" />
                 <div className='absolute top-[45%] left-[5%]'>
                     <p className='text-xl text-white'>A restaurant website description should be concise and informative, highlighting the restaurant's unique qualities and providing essential information like location, cuisine, and hours of operation</p>
-                    <NavLink to='/allFoods'><button className='btn btn-primary'>Explore</button></NavLink>
+                    <NavLink to='/allFoods'><button className=' bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600 transition-colors duration-200 cursor-pointer'>Explore</button></NavLink>
                 </div>
                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide4" className="btn btn-circle">❮</a>
@@ -24,7 +24,7 @@ const SliderImage = () => {
                     className="w-full" />
                 <div className='absolute top-[45%] left-[5%]'>
                     <p className='text-xl text-white'>A restaurant website description should be concise and informative, highlighting the restaurant's unique qualities and providing essential information like location, cuisine, and hours of operation</p>
-                    <NavLink to='/allFoods'><button className='btn btn-primary'>Explore</button></NavLink>
+                    <NavLink to='/allFoods'><button className=' bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600 transition-colors duration-200 cursor-pointer'>Explore</button></NavLink>
                 </div>
                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide1" className="btn btn-circle">❮</a>
@@ -37,7 +37,7 @@ const SliderImage = () => {
                     className="w-full" />
                 <div className='absolute top-[45%] left-[5%]'>
                     <p className='text-xl text-white'>A restaurant website description should be concise and informative, highlighting the restaurant's unique qualities and providing essential information like location, cuisine, and hours of operation</p>
-                    <NavLink to='/allFoods'><button className='btn btn-primary'>Explore</button></NavLink>
+                    <NavLink to='/allFoods'><button className=' bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600 transition-colors duration-200 cursor-pointer'>Explore</button></NavLink>
                 </div>
                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide2" className="btn btn-circle">❮</a>
