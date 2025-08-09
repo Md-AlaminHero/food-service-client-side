@@ -88,7 +88,7 @@ const Navbar = () => {
                                 <li><NavLink to='/AddFood'>Add Food</NavLink></li>
                                 <li><NavLink to='/MyPostedFoods'>My Posted Foods</NavLink></li>
                                 <li><NavLink to='/allFoods'>All Foods</NavLink></li>
-                                <li><NavLink to='/'>Food Gallery</NavLink></li>
+                                <li><NavLink to='/food-gallery'>Food Gallery</NavLink></li>
                                 <li><Link to='/signin' onClick={handleSignOut} className="btn btn-primary px-10 ">Log Out</Link></li>
                             </ul>
                         </div>

@@ -21,7 +21,7 @@ export default function Footer() {
                     <ul className="space-y-2 text-gray-400 md:text-center">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/allFoods'>All Foods</NavLink></li>
-                        <li><NavLink to='/'>Food Gallery</NavLink></li>
+                        <li><NavLink to='/food-gallery'>Food Gallery</NavLink></li>
                         <li><NavLink to='/aboutUs'>About Us</NavLink></li>
                         <li><NavLink to='/contact'>Contact</NavLink></li>
                     </ul>

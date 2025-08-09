@@ -4,11 +4,12 @@ import React, { use } from 'react';
 import registerLottie from '../../assets/lotties/register.json'
 import { AuthContext } from '../../Context/AuthContext';
 import Swal from 'sweetalert2';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 const Register = () => {
 
-    const { createUser, signInWithGoogle, updateUser } = use(AuthContext);
+    const { createUser, signInWithGoogle } = use(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -29,6 +30,7 @@ const Register = () => {
                         draggable: true
                     });
                 }
+                navigate('/')
             })
             .catch(error => {
                 console.log(error);

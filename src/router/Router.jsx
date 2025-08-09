@@ -15,6 +15,7 @@ import AllFoods from '../pages/AllFoods/AllFoods';
 import AboutUs from '../pages/Shared/AboutUs';
 import Contact from '../pages/Shared/Contact';
 import FoodGallery from '../pages/Home/FoodGallery';
+import ErrorPage from '../pages/ErrorPage';
 
 
 export const router = createBrowserRouter([
@@ -88,5 +89,9 @@ export const router = createBrowserRouter([
                 Component: SignIn
             }
         ]
+    },
+    {
+        path: '*',
+        Component: ErrorPage
     }
 ])
