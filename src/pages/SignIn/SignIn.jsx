@@ -3,7 +3,8 @@ import { AuthContext } from '../../Context/AuthContext';
 
 import signInLottie from '../../assets/lotties/signin.json';
 import Lottie from 'lottie-react';
-import { useLocation, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
+import Swal from 'sweetalert2';
 
 const SignIn = () => {
 
@@ -26,11 +27,21 @@ const SignIn = () => {
         // Sign In user
         signInUser(email, password)
             .then(result => {
-                console.log(result);
+                // console.log(result);
+                Swal.fire({
+                    title: 'Login Successful!',
+                    text: 'Welcome back!',
+                    icon: 'success',
+                    confirmButtonText: 'Continue',
+                    timer: 2000,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                });
                 navigate(from)
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
+                Swal.fire("Please check email and password");
             })
 
     }
@@ -52,6 +63,12 @@ const SignIn = () => {
                                 <input type="password" name='password' className="input" placeholder="Password" />
                                 <button className="btn btn-neutral mt-4">Sign In</button>
                             </fieldset>
+                            <p>
+                                <small>
+                                    Don't have an account?
+                                    <Link to='/register' className='btn-link text-blue-700'> Register</Link>
+                                </small>
+                            </p>
                         </form>
                     </div>
                 </div>

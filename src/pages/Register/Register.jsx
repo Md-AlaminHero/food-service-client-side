@@ -4,6 +4,7 @@ import React, { use } from 'react';
 import registerLottie from '../../assets/lotties/register.json'
 import { AuthContext } from '../../Context/AuthContext';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router';
 
 const Register = () => {
 
@@ -56,6 +57,7 @@ const Register = () => {
                                 <input type="password" name='password' className="input" placeholder="Password" />
                                 <button className="btn btn-neutral mt-4">Register</button>
                             </fieldset>
+                            <p><small>Already have an account? <Link className="btn btn-link" to="/signin">Login</Link></small></p>
                             <div className="divider">OR</div>
                             {/* Google */}
                             <button onClick={() => signInWithGoogle()} className="btn bg-white text-black border-[#e5e5e5] w-full">

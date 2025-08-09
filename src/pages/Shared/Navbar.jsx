@@ -10,9 +10,19 @@ const Navbar = () => {
     //* console.log(user.email);  ----  eita deyate error aschilo
 
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/allFoods'>All Foods</NavLink></li>
-        <li><NavLink to='/'>Food Gallery</NavLink></li>
+        {
+            user ? <>
+                <li><NavLink to='/'>Home</NavLink></li>
+                <li><NavLink to='/allFoods'>About Us</NavLink></li>
+                <li><NavLink to='/'>Contact</NavLink></li>
+            </> : <>
+                <li><NavLink to='/'>Home</NavLink></li>
+                <li><NavLink to='/allFoods'>All Foods</NavLink></li>
+                <li><NavLink to='/'>Food Gallery</NavLink></li>
+                <li><NavLink to='/allFoods'>About Us</NavLink></li>
+                <li><NavLink to='/'>Contact</NavLink></li>
+            </>
+        }
     </>
 
     const handleSignOut = () => {
@@ -26,7 +36,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-lg border-b-2 border-yellow-500 fixed top-0 left-0 w-full z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,34 +64,40 @@ const Navbar = () => {
                         </>
                 } */}
                 {user ?
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full" data-tip="hello">
-                                <img
-                                    title='User Name'
-                                    alt="Tailwind CSS Navbar component"
-                                    src={`${user && user.photoURL}`} />
-                                {
-                                    user ?
-                                        <Link to='/signin' onClick={handleSignOut} className="btn btn-primary px-10 ">Log Out</Link> :
-                                        <Link to='/signin' className="btn btn-primary px-10 ">Login</Link>
-                                }
+                    <div className='flex gap-3 items-center'>
+                        {/* <ToggleTheme></ToggleTheme> */}
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full" data-tip="hello">
+                                    <img
+                                        title='User Name'
+                                        alt="Tailwind CSS Navbar component"
+                                        src={`${user && user.photoURL}`} />
+                                    {
+                                        user ?
+                                            <Link to='/signin' onClick={handleSignOut} className="btn btn-primary px-10 ">Log Out</Link> :
+                                            <Link to='/signin' className="btn btn-primary px-10 ">Login</Link>
+                                    }
+                                </div>
                             </div>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-3">
+                                <ToggleTheme></ToggleTheme>
+                                <li><NavLink to='/MyOrders'>MyOrders</NavLink></li>
+                                <li><NavLink to='/AddFood'>Add Food</NavLink></li>
+                                <li><NavLink to='/MyPostedFoods'>My Posted Jobs</NavLink></li>
+                                <li><NavLink to='/allFoods'>All Foods</NavLink></li>
+                                <li><NavLink to='/'>Food Gallery</NavLink></li>
+                                <li><Link to='/signin' onClick={handleSignOut} className="btn btn-primary px-10 ">Log Out</Link></li>
+                            </ul>
                         </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-3">
-                            <li><NavLink to='/MyOrders'>MyOrders</NavLink></li>
-                            <li><NavLink to='/AddFood'>Add Food</NavLink></li>
-                            <li><NavLink to='/MyPostedFoods'>My Posted Jobs</NavLink></li>
-                            <li><Link to='/signin' onClick={handleSignOut} className="btn btn-primary px-10 ">Log Out</Link></li>
-                        </ul>
                     </div> :
-                    <>
-                        <NavLink className='btn' to='/register'>Register</NavLink>
+                    <div className='flex gap-1 items-center'>
+                        {/* <NavLink className='btn' to='/register'>Register</NavLink> */}
                         <NavLink className='btn' to='/signin'>SignIn</NavLink>
                         <ToggleTheme></ToggleTheme>
-                    </>
+                    </div>
                 }
 
             </div>
