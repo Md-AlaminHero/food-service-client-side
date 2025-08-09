@@ -36,7 +36,7 @@ const Banner = () => {
                     <p className="py-6">
                         A restaurant website description should be concise and informative, highlighting the restaurant's unique qualities and providing essential information like location, cuisine, and hours of operation.
                     </p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <button className="bg-yellow-600 border font-semibold border-teal-200 px-4 py-2 rounded-xl hover:bg-transparent transition-colors duration-200 cursor-pointer">Get Started</button>
                 </div>
             </div>
         </div>

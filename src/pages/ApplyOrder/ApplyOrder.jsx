@@ -74,7 +74,7 @@ const ApplyOrder = () => {
                     <input type="text" name='user_address' className="input w-full" placeholder="User Address" />
 
 
-                    <input type="submit" className='btn btn-primary' value="Purchase" />
+                    <input type="submit" className='bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600 transition-colors duration-200 cursor-pointer' value="Purchase" />
                 </fieldset>
             </form>
         </div>

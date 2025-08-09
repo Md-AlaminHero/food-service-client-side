@@ -16,7 +16,7 @@ const ViewOrders = () => {
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
-                        title: "Your Job singleOrder Status has been Updated",
+                        title: "Your Food singleOrder Status has been Updated",
                         showConfirmButton: false,
                         timer: 1500
                     });
