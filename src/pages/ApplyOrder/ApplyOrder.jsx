@@ -27,7 +27,7 @@ const ApplyOrder = () => {
             ...foodData
         }
 
-        axios.post('https://restaurant-code-server.vercel.app/customers', order)
+        axios.post('https://food-service-server-side.vercel.app/customers', order)
             .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {

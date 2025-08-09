@@ -16,7 +16,7 @@ const AddFood = () => {
 
         // save job to the database
 
-        axios.post('https://restaurant-code-server.vercel.app/foods', foodData)
+        axios.post('https://food-service-server-side.vercel.app/foods', foodData)
             .then(res => {
                 if (res.data.insertedId) {
                     Swal.fire({

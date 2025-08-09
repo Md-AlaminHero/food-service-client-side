@@ -4,7 +4,7 @@ import LoadingSpinner from '../Shared/LoadingSpinner';
 
 const AllFoods = () => {
 
-    const foodsPromise = fetch('https://restaurant-code-server.vercel.app/foods').then(res => res.json());
+    const foodsPromise = fetch('https://food-service-server-side.vercel.app/foods').then(res => res.json());
     return (
         <div>
             <Suspense fallback={<LoadingSpinner></LoadingSpinner>}>

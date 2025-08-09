@@ -46,14 +46,14 @@ export const router = createBrowserRouter([
             {
                 path: '/foods/:id',
                 Component: FoodDetails,
-                loader: ({ params }) => fetch(`https://restaurant-code-server.vercel.app/foods/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-service-server-side.vercel.app/foods/${params.id}`)
             },
             {
                 path: '/purchase/:id',
                 element: <PrivateRoute>
                     <ApplyOrder></ApplyOrder>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`https://restaurant-code-server.vercel.app/foods/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-service-server-side.vercel.app/foods/${params.id}`)
             },
             {
                 path: 'myOrders',
@@ -78,7 +78,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <ViewOrders></ViewOrders>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`https://restaurant-code-server.vercel.app/customers/food/${params.food_id}`)
+                loader: ({ params }) => fetch(`https://food-service-server-side.vercel.app/customers/food/${params.food_id}`)
             },
             {
                 path: '/register',

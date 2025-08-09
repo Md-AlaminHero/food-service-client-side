@@ -10,7 +10,7 @@ const ViewOrders = () => {
     const handleStatusChange = (e, customer_id) => {
         // console.log(e.target.value, customer_id);
 
-        axios.patch(`https://restaurant-code-server.vercel.app/customers/${customer_id}`, { status: e.target.value })
+        axios.patch(`https://food-service-server-side.vercel.app/customers/${customer_id}`, { status: e.target.value })
             .then(res => {
                 if (res.data.modifiedCount) {
                     Swal.fire({

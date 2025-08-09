@@ -8,7 +8,7 @@ import Testimonials from './Testimonials';
 
 const Home = () => {
 
-    const foodsPromise = fetch('https://restaurant-code-server.vercel.app/foods').then(res => res.json());
+    const foodsPromise = fetch('https://food-service-server-side.vercel.app/foods').then(res => res.json());
 
     return (
         <div>
