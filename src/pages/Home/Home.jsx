@@ -2,6 +2,9 @@ import React, { Suspense } from 'react';
 import Banner from './Banner';
 import HotFoods from './HotFoods';
 import SliderImage from './SliderImage';
+import FAQ from './FAQ';
+import WhyChooseUs from './WhyChooseUs';
+import Testimonials from './Testimonials';
 
 const Home = () => {
 
@@ -14,6 +17,9 @@ const Home = () => {
             <Suspense fallback={`loading.....`}>
                 <HotFoods foodsPromise={foodsPromise}></HotFoods>
             </Suspense>
+            <WhyChooseUs></WhyChooseUs>
+            <FAQ></FAQ>
+            <Testimonials></Testimonials>
         </div>
     );
 };
