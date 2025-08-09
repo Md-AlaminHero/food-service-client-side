@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "motion/react";
+import { Link } from 'react-router';
 
 const Banner = () => {
     return (
@@ -36,7 +37,7 @@ const Banner = () => {
                     <p className="py-6">
                         A restaurant website description should be concise and informative, highlighting the restaurant's unique qualities and providing essential information like location, cuisine, and hours of operation.
                     </p>
-                    <button className="bg-yellow-600 border font-semibold border-teal-200 px-4 py-2 rounded-xl hover:bg-transparent transition-colors duration-200 cursor-pointer">Get Started</button>
+                    <Link to='/allFoods' className="bg-transparent border font-semibold border-teal-200 px-4 py-2 rounded-xl hover:bg-orange-500 transition-colors duration-200 cursor-pointer">Explore Now</Link>
                 </div>
             </div>
         </div>

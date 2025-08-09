@@ -18,7 +18,7 @@ const Navbar = () => {
             </> : <>
                 <li><NavLink to='/'>Home</NavLink></li>
                 <li><NavLink to='/allFoods'>All Foods</NavLink></li>
-                <li><NavLink to='/'>Food Gallery</NavLink></li>
+                <li><NavLink to='/food-gallery'>Food Gallery</NavLink></li>
                 <li><NavLink to='/aboutUs'>About Us</NavLink></li>
                 <li><NavLink to='/contact'>Contact</NavLink></li>
             </>
@@ -93,7 +93,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div> :
-                    <div className='flex gap-1 items-center'>
+                    <div className='flex gap-1 items-center justify-center'>
                         {/* <NavLink className='btn' to='/register'>Register</NavLink> */}
                         <NavLink className='btn' to='/signin'>SignIn</NavLink>
                         <ToggleTheme></ToggleTheme>

@@ -14,6 +14,7 @@ import ViewOrders from '../pages/ViewOrders/ViewOrders';
 import AllFoods from '../pages/AllFoods/AllFoods';
 import AboutUs from '../pages/Shared/AboutUs';
 import Contact from '../pages/Shared/Contact';
+import FoodGallery from '../pages/Home/FoodGallery';
 
 
 export const router = createBrowserRouter([
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 Component: Contact
+            },
+            {
+                path: '/food-gallery',
+                Component: FoodGallery
             },
             {
                 path: 'allFoods',
