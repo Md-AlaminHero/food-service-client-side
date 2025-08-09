@@ -65,13 +65,13 @@ const ApplyOrder = () => {
                     <input type="number" name='price' defaultValue={food.price} readOnly className="input w-full" placeholder="Price" />
 
                     <label className="label">User Name</label>
-                    <input type="text" name='user_name' defaultValue={user.displayName} className="input w-full" placeholder="User Name" />
+                    <input type="text" name='user_name' defaultValue={user.displayName} className="input w-full" placeholder="User Name" required/>
 
                     <label className="label">User Email</label>
-                    <input type="email" name='user_email' defaultValue={user.email} className="input w-full" placeholder="User Email" />
+                    <input type="email" name='user_email' defaultValue={user.email} className="input w-full" placeholder="User Email" required/>
 
                     <label className="label">User Address</label>
-                    <input type="text" name='user_address' className="input w-full" placeholder="User Address" />
+                    <input type="text" name='user_address' className="input w-full" placeholder="User Address" required/>
 
 
                     <input type="submit" className='bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600 transition-colors duration-200 cursor-pointer' value="Purchase" />
