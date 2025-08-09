@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
+import ToggleTheme from './ToggleTheme';
 
 const Navbar = () => {
 
@@ -79,6 +80,7 @@ const Navbar = () => {
                     <>
                         <NavLink className='btn' to='/register'>Register</NavLink>
                         <NavLink className='btn' to='/signin'>SignIn</NavLink>
+                        <ToggleTheme></ToggleTheme>
                     </>
                 }
 
